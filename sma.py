@@ -16,6 +16,7 @@ that range.
 
 Sources:
     https://www.investopedia.com/terms/s/sma.asp
+    https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html
 
 Calculation:
     close.rolling(period).mean()

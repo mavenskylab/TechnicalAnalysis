@@ -16,12 +16,13 @@ points.
 
 Sources:
     https://www.investopedia.com/terms/e/ema.asp
+    https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.ewm.html
 
 Calculation:
     close.ewm(span=period, adjust=False).mean()
 
 Params:
-    close (Pandas Series) Series of closing prices
+    close (Pandas Series): Series of closing prices
     period (int): The period. Default 10
 
 

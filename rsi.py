@@ -30,6 +30,7 @@ other asset.
 Sources:
     https://www.investopedia.com/terms/e/ema.asp
     https://www.tradingview.com/support/solutions/43000502338-relative-strength-index-rsi/
+    https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.ewm.html
 
 Calculation:
     gain = close.diff()
