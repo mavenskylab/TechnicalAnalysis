@@ -20,7 +20,9 @@ Sources:
     https://www.investopedia.com/terms/m/macd.asp
 
 Calculation:
-    ema(close, fast) - ema(close, slow)
+    EMA = Exponential Moving Average
+
+    EMA(close, fast) - EMA(close, slow)
 
 Params:
     close (Pandas Series): Series of closing prices

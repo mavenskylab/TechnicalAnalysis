@@ -21,7 +21,7 @@ Calculation:
     close.rolling(period).mean()
 
 Params:
-    close (Pandas Series) Series of closing prices
+    close (Pandas Series): Series of closing prices
     period (int): The period. Default 10
 
 
