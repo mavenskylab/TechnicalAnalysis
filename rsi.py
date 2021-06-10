@@ -1,3 +1,6 @@
+from TechnicalAnalysis.rma import rma
+
+
 def rsi(close, period=14):
     """Indicator: Relative Strength Index (RSI)"""
 
@@ -10,8 +13,8 @@ def rsi(close, period=14):
     gain[gain < 0] = 0
     loss[loss < 0] = 0
 
-    avg_gain = gain.ewm(alpha=1/period, min_periods=period).mean()
-    avg_loss = loss.ewm(alpha=1/period, min_periods=period).mean()
+    avg_gain = rma(gain, period)
+    avg_loss = rma(loss, period)
 
     rs = avg_gain / avg_loss
 
@@ -33,14 +36,16 @@ Sources:
     https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.ewm.html
 
 Calculation:
+    RMA = Wilder's Moving Average
+
     gain = close.diff()
     loss = gain * -1
 
     gain[gain < 0] = 0
     loss[loss < 0] = 0
 
-    avg_gain = gain.ewm(alpha=1/period, min_periods=period).mean()
-    avg_loss = loss.ewm(alpha=1/period, min_periods=period).mean()
+    avg_gain = RMA(gain, period)
+    avg_loss = RMA(loss, period)
 
     rs = avg_gain / avg_loss
 

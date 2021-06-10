@@ -1,3 +1,6 @@
+from TechnicalAnalysis.ema import ema
+
+
 def macd(close, fast=12, slow=26):
     """Indicator: Moving Average Convergence Divergence (MACD)"""
 
